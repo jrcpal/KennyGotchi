@@ -5,23 +5,27 @@ body {
 
 @font-face {
   font-family: "Chirurgeon";
-  src: url('fonts/Chirurgeon.woff2') format('woff2');
-  src: url('fonts/Chirurgeon.woff') format('woff');
-  src: url('fonts/Chirurgeon.ttf') format('truetype');
+  src: url(fonts/Chirurgeon.woff2) format('woff2');
+  font-style: normal;
+  font-weight: 100;
+  src: url(fonts/Chirurgeon.woff) format('woff');
+  src: url(fonts/Chirurgeon.ttf) format('truetype');
+}
+
+
+h1 {
+  font-family: 'Chirurgeon', sans-serif;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 64px;
 }
 
 #screen {
   width: 100vw; 
   height: 100vh;
   background: radial-gradient(circle, rgba(238,174,210,1) 0%, rgba(148,233,216,1) 100%);
-}
-
-h1 {
-  margin: 0;
-  padding-top: 20px;
-  text-align: center;
-  font-family: 'Chirurgeon', sans-serif;
-  font-size: 64px;
 }
 
 #face {
