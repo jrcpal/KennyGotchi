@@ -4,18 +4,17 @@ body {
 }
 
 @font-face {
-  font-family: "Chirurgeon";
-  font-style: normal;
+  font-family: 'Chirurgeon';
   font-weight: 100;
-  src: url("fonts/Chirurgeon.woff2") format('woff2');
-  src: url("fonts/Chirurgeon.woff") format('woff');
-  src: url("fonts/Chirurgeon.ttf") format('truetype');
-  src: url("fonts/Chirurgeon.otf") format('opentype');
+  src: url('fonts/Chirurgeon.woff2') format('woff2');
+  src: url('fonts/Chirurgeon.woff') format('woff');
+  src: url('fonts/Chirurgeon.ttf') format('truetype');
+  src: url('fonts/Chirurgeon.otf') format('opentype');
 }
 
 
 h1 {
-  font-family: 'Chirurgeon', sans-serif;
+  font-family: 'Chirurgeon';
   margin: 0;
   padding-top: 20px;
   text-align: center;
