@@ -5,7 +5,7 @@ body {
 
 @font-face {
   font-family: "Chirurgeon";
-  src: url('fonts/Chirurgeon.woff') format('woff2');
+  src: url('fonts/Chirurgeon.woff2') format('woff2');
   src: url('fonts/Chirurgeon.woff') format('woff');
   src: url('fonts/Chirurgeon.ttf') format('truetype');
 }
