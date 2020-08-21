@@ -8,9 +8,9 @@ const game_buttons = document.querySelector(".game-buttons")
 let face = document.getElementById("#face")
 let text = document.getElementById("h2")
 
-happyPhrases = ["I'm posting this in my Gram!", "", "Guys, seriously, I love working with you.", "LOL <3!", "", "See! This is why we're frandz!"];
-okayPhrases = ["", "", "Wut? What did I do?", "...Wow you guys", "Ugh, and everyone wants to work at a standup these days", "Maki isn't going to like this one bit."];
-sadPhrases = ["Well, this is my life meow", "", "Oh no! Hungo level 100", "Whateverz", "Noo I don't want to be on-call this week", ""];
+happyPhrases = ["I'm posting this in my Gram!", "", "Guys, seriously, I love working with you.", "LOL <3!", "", "See! This is why we're frandz!", "", ""];
+okayPhrases = ["", "", "Wut? What did I do?", "...Wow you guys", "Ugh, and everyone wants to work at a standup these days", "Maki isn't going to like this one bit.", "", ""];
+sadPhrases = ["Well, this is my life meow", "", "I need a walk", "Whateverz", "Noo I don't want to be on-call this week", "", "", ""];
 deadPhrases = ["I blame n8", "You killed Kenny!", "This is how you treat your coworkers?", "Top 10 Betrayal", "BRB dead", "I hate dis"];
 
 
@@ -19,7 +19,7 @@ deadPhrases = ["I blame n8", "You killed Kenny!", "This is how you treat your co
 
 let kennygotchi = {
   ego: 11,
-  food: 10,
+  food: 5,
   work: 1,
 }
 
@@ -76,22 +76,22 @@ const getPhrases = () => {
 }
 
 
-/* NOTE! All moods must have the same number of phrases in their array */
+/* Pick random phrase */
 
 const gethappyPhrase = function () {
-  const randomVal = Math.floor(Math.random() * 6);
+  const randomVal = Math.floor(Math.random() * happyPhrases.length);
   document.getElementById("text").innerHTML = happyPhrases[randomVal];
 }
 const getOkayPhrase = function () {
-  const randomVal = Math.floor(Math.random() * 6);
+  const randomVal = Math.floor(Math.random() * okayPhrases.length);
   document.getElementById("text").innerHTML = okayPhrases[randomVal];
 }
 const getSadPhrase = function () {
-  const randomVal = Math.floor(Math.random() * 6);
+  const randomVal = Math.floor(Math.random() * sadPhrases.length);
   document.getElementById("text").innerHTML = sadPhrases[randomVal];
 }
 const getDeadPhrase = function () {
-  const randomVal = Math.floor(Math.random() * 6);
+  const randomVal = Math.floor(Math.random() * deadPhrases.length);
   document.getElementById("text").innerHTML = deadPhrases[randomVal];
 }
 
@@ -154,6 +154,7 @@ restart.addEventListener("click", function () {
   }
   timer = setInterval(function () { timePasses() }, 2000);
   document.getElementById("text").innerHTML = "";
+  document.getElementById("face").src = "https://bit.ly/3kCSV79";
 })
 
 
@@ -161,13 +162,26 @@ restart.addEventListener("click", function () {
 
 play.addEventListener("click", function () {
   if (kennygotchi.ego < 17) kennygotchi.ego += 1;
+  if (kennygotchi.ego < 10) document.getElementById("text").innerHTML = "Thanks, I needed that!";
+  if (kennygotchi.ego > 10) document.getElementById("text").innerHTML = "Aww shucks guys!";
 })
 
 feed.addEventListener("click", function () {
   if (kennygotchi.food < 17) kennygotchi.food += 1;
+  if (kennygotchi.food < 5)
+    document.getElementById("text").innerHTML = "So Hungooo";
+  if (kennygotchi.food > 5)
+    document.getElementById("text").innerHTML = "Nom nom nom!"; 
+  if (kennygotchi.food > 13)
+    document.getElementById("text").innerHTML = "Ahh so full!";   
+
 })
 
 work.addEventListener("click", function () {
   if (kennygotchi.work < 10) kennygotchi.work += 1;
+  if (kennygotchi.work < 5)
+    document.getElementById("text").innerHTML = "I'm on it!";  
+  if (kennygotchi.work > 5)
+    document.getElementById("text").innerHTML = "Nooo, why?";  
 })
 
