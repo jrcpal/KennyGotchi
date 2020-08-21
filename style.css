@@ -92,17 +92,39 @@ h1 {
 }
 
 .button {
-  border-radius: 8%;
   margin: 0px 10px;
   border: 0;
-  width: 100px;
-  height: 30px;
+  padding: 0 15px;
+  height: 40px;
   background-color: #fec32d; 
   font-size: 14px;
   font-weight: bold;
   font-family: 'Calibre', sans-serif;
-  box-shadow: .5px .5px grey;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background-color: #fcad26;
+  font-size: 14px;
+  font-weight: 100px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  box-shadow: 0 6px #efa424;
+  border-radius: 20px;
 }
+
+.button:hover{
+  box-shadow:0 4px #efa424;
+  top: 2px;
+}
+
+.button:active{
+  box-shadow: none;
+  top: 6px;
+}
+
 
 .game-buttons {
   display: none;
@@ -111,5 +133,5 @@ h1 {
 #restart-button {
   display: none;
   margin: auto;
-  width: 100px;
+  width: 140px;
 }
